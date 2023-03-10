@@ -39,28 +39,30 @@ int _atoi(char *s)
 
 	if (s[i] >= '0' && s[i] <= '9')
 
-	{
-		digit = s[i] - '0';
+{
 
-		if (d % 2)
+digit = s[i] - '0';
 
-		digit = -digit;
+if (d % 2)
 
-		n = n * 10 + digit;
+digit = -digit;
 
-		f = 1;
+n = n * 10 + digit;
 
-		if (s[i + 1] < '0' || s[i + 1] > '9')
-		break;
-		f = 0;
-	}
-		i++;
+f = 1;
+
+if (s[i + 1] < '0' || s[i + 1] > '9')
+break;
+f = 0;
 
 }
-		if (f == 0)
+i++;
 
-		return (0);
-		return (n);
+}
+if (f == 0)
+
+return (0);
+return (n);
 }
 /**
  * main - multiplies two numbers
